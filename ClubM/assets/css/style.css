@@ -875,49 +875,32 @@ footer {
   background-color: #dc3545 !important;
   }
 
-  /* =====================================
-   SECCIÓN DE VIDEOS
+/* =====================================
+   SECCIÓN DE VIDEOS - SIN SEPARADORES NI TEXTO
    ===================================== */
 
 .videos-section {
-  margin-top: 4rem;
-  padding-top: 3rem;
-  border-top: 2px solid rgba(95, 183, 89, 0.2);
+  margin-top: 2rem; /* Reducido para que esté más cerca */
+  padding-top: 0; /* Sin padding superior */
+  /* Eliminamos border-top */
 }
 
-.videos-title {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.videos-title h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--dark-color);
-  margin-bottom: 1rem;
-}
-
-.videos-title p {
-  font-size: 1.1rem;
-  color: var(--text-light);
-  max-width: 600px;
-  margin: 0 auto;
-}
+/* Eliminamos completamente .videos-title */
 
 .videos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .video-item {
-  background: white;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  /* Eliminamos background blanco */
 }
 
 .video-item:hover {
@@ -927,41 +910,34 @@ footer {
 
 .video-item video {
   width: 100%;
-  height: 250px;
+  height: 400px; /* Altura rectangular para videos verticales */
   object-fit: cover;
   display: block;
+  border-radius: 20px; /* Bordes redondeados al video directamente */
 }
 
-.video-caption {
-  padding: 1.5rem;
-  text-align: center;
+/* Eliminamos completamente .video-caption */
+
+/* Responsive para videos verticales */
+@media (max-width: 1200px) {
+  .videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .video-item video {
+    height: 350px;
+  }
 }
 
-.video-caption h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--dark-color);
-  margin-bottom: 0.5rem;
-}
-
-.video-caption p {
-  color: var(--text-light);
-  font-size: 0.9rem;
-}
-
-/* Responsive para videos */
 @media (max-width: 768px) {
   .videos-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
   
   .video-item video {
-    height: 200px;
-  }
-  
-  .videos-title h3 {
-    font-size: 1.8rem;
+    height: 300px;
   }
 }
 
@@ -972,15 +948,23 @@ footer {
   }
   
   .video-item video {
-    height: 180px;
-  }
-  
-  .video-caption {
-    padding: 1rem;
+    height: 400px;
   }
   
   .videos-section {
-    margin-top: 3rem;
-    padding-top: 2rem;
+    margin-top: 1.5rem;
+    padding-top: 0;
+  }
+}
+
+/* Para pantallas muy grandes */
+@media (min-width: 1400px) {
+  .videos-grid {
+    max-width: 1400px;
+    gap: 2rem;
+  }
+  
+  .video-item video {
+    height: 450px;
   }
 }
