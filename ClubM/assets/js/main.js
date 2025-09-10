@@ -295,3 +295,66 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// =====================================
+// CONTROL DE VIDEOS EN LOOP
+// =====================================
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Configurar todos los videos para reproducción automática en loop
+  const videos = document.querySelectorAll('.video-item video');
+  
+  videos.forEach((video, index) => {
+    // Asegurar que el video esté configurado correctamente
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true; // Para móviles
+    
+    // Manejar errores de carga
+    video.addEventListener('error', function() {
+      console.log(`Error cargando video ${index + 1}`);
+    });
+    
+    // Asegurar que el video se reproduce cuando está listo
+    video.addEventListener('loadeddata', function() {
+      video.play().catch(function(error) {
+        console.log(`No se pudo reproducir automáticamente el video ${index + 1}:`, error);
+      });
+    });
+    
+    // Asegurar que el video vuelva a empezar cuando termine (backup del loop)
+    video.addEventListener('ended', function() {
+      video.currentTime = 0;
+      video.play();
+    });
+  });
+});
+
+// =====================================
+// CONTROL DE VISIBILIDAD DE VIDEOS (PERFORMANCE)
+// =====================================
+
+// Pausar videos cuando no están visibles para ahorrar recursos
+const videoObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const video = entry.target.querySelector('video');
+    if (video) {
+      if (entry.isIntersecting) {
+        video.play().catch(error => console.log('Error reproduciendo video:', error));
+      } else {
+        video.pause();
+      }
+    }
+  });
+}, {
+  threshold: 0.5 // El video debe estar al menos 50% visible
+});
+
+// Observar todos los contenedores de video
+document.addEventListener('DOMContentLoaded', function() {
+  const videoItems = document.querySelectorAll('.video-item');
+  videoItems.forEach(item => {
+    videoObserver.observe(item);
+  });
+});
