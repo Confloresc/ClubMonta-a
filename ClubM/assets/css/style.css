@@ -1,4 +1,42 @@
+/* Espaciado entre las dos filas de comunidad */
+.community-carousel-1 {
+  margin-bottom: 2rem;
+}
+
+.community-carousel-2 {
+  margin-bottom: 0;
+}
+
 /* =====================================
+   SOCIAL LINKS
+   ===================================== */
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 1.2rem;
+}
+
+.social-link:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  color: white;
+}/* =====================================
    CORDADA CHILLÁN - ESTILOS PRINCIPALES
    ===================================== */
 
@@ -79,22 +117,63 @@ html {
 }
 
 /* =====================================
-   HERO SECTION
+   HERO SECTION CON BANNER CAROUSEL
    ===================================== */
 
 .hero-section {
   height: 100vh;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
 }
 
-.hero-content {
+.banner-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.banner-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  z-index: 1;
+}
+
+.banner-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(44, 90, 62, 0.7) 0%, rgba(95, 183, 89, 0.7) 100%);
   z-index: 2;
+}
+
+.hero-content {
+  z-index: 3;
   color: white;
   text-align: center;
+  position: relative;
 }
 
 .hero-title {
@@ -127,16 +206,6 @@ html {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   color: var(--primary-color);
-}
-
-.hero-decoration {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="0,0 100,0 100,100" fill="rgba(255,255,255,0.05)"/></svg>');
-  background-size: cover;
 }
 
 /* =====================================
@@ -176,17 +245,17 @@ section {
 }
 
 /* =====================================
-   CARDS DE ACTIVIDADES
+   CARDS DE ACTIVIDADES CON CAROUSELS
    ===================================== */
 
 .activity-card {
   background: white;
   border-radius: 20px;
-  padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: var(--shadow);
   transition: var(--transition);
   border: none;
+  overflow: hidden;
 }
 
 .activity-card:hover {
@@ -194,15 +263,40 @@ section {
   box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
-.activity-date {
-  background: var(--secondary-color);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 1rem;
+.activity-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.activity-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.activity-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.activity-slide.active {
+  opacity: 1;
+}
+
+.activity-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.activity-content {
+  padding: 2rem;
 }
 
 .activity-title {
@@ -260,7 +354,7 @@ section {
 }
 
 /* =====================================
-   GALERÍA DE COMUNIDAD
+   GALERÍA DE COMUNIDAD - DOS FILAS
    ===================================== */
 
 .community-gallery {
@@ -285,6 +379,15 @@ section {
   height: 250px;
   object-fit: cover;
   display: block;
+}
+
+/* Espaciado entre las dos filas de comunidad */
+.community-carousel-1 {
+  margin-bottom: 2rem;
+}
+
+.community-carousel-2 {
+  margin-bottom: 0;
 }
 
 /* =====================================
@@ -445,8 +548,13 @@ footer {
     height: 35px;
   }
   
-  .activity-card {
-    padding: 1.5rem;
+  .activities-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .activity-image-container {
+    height: 250px;
   }
   
   .stats-grid {
@@ -476,13 +584,17 @@ footer {
     font-size: 1.8rem;
   }
   
-  .activity-card {
-    padding: 1rem;
-    margin-bottom: 1rem;
+  .activities-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   
-  .activity-title {
-    font-size: 1.1rem;
+  .activity-image-container {
+    height: 200px;
+  }
+  
+  .activity-column h3 {
+    font-size: 1.3rem;
   }
   
   .about-text {
@@ -526,4 +638,4 @@ footer {
 
 .bg-danger {
   background-color: #dc3545 !important;
-}
+  }

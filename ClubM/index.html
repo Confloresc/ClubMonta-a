@@ -6,7 +6,7 @@
   <meta name="description" content="Club de montaña federado sin fines de lucro de Chillán. Por una montaña más segura. Charlas, cursos, excursiones, trekking y escalada.">
   <meta name="author" content="Cordada Chillán">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <title>Cordada Chillán – Club de Montañismo</title>
+  <title>Cordada Chillán — Club de Montañismo</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
@@ -51,9 +51,35 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero Section con Banner Carousel -->
 <section id="home" class="hero-section">
-  <div class="hero-decoration"></div>
+  <div class="banner-carousel">
+    <div class="banner-slide active">
+      <img src="assets/images/BANNER/b1.jpg" alt="Banner 1">
+    </div>
+    <div class="banner-slide">
+      <img src="assets/images/BANNER/b2.jpg" alt="Banner 2">
+    </div>
+    <div class="banner-slide">
+      <img src="assets/images/BANNER/b3.jpg" alt="Banner 3">
+    </div>
+    <div class="banner-slide">
+      <img src="assets/images/BANNER/b4.jpg" alt="Banner 4">
+    </div>
+    <div class="banner-slide">
+      <img src="assets/images/BANNER/b5.jpg" alt="Banner 5">
+    </div>
+    <div class="banner-slide">
+      <img src="assets/images/BANNER/b6.jpg" alt="Banner 6">
+    </div>
+    <div class="banner-slide">
+      <img src="assets/images/BANNER/b7.jpg" alt="Banner 7">
+    </div>
+    <div class="banner-slide">
+      <img src="assets/images/BANNER/b8.jpg" alt="Banner 8">
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
@@ -80,76 +106,128 @@
       <div class="section-subtitle">Nuestras</div>
       <h2 class="section-heading">Actividades</h2>
       <p class="section-description">
-        Charlas, cursos, excursiones, trekking y talleres de escalada. 
+        Charlas educativas, talleres prácticos y excursiones emocionantes. 
         Actividades para todos los niveles con seguridad y compañerismo.
       </p>
     </div>
 
     <div class="row">
-      <div class="col-lg-6 fade-in-up">
+      <!-- Charlas -->
+      <div class="col-lg-4 fade-in-up">
         <div class="activity-card">
-          <div class="activity-date">
-            <i class="fas fa-calendar-alt me-2"></i>
-            00 / 00 / 00
+          <div class="activity-image-container">
+            <div class="activity-carousel charlas-carousel">
+              <div class="activity-slide active">
+                <img src="assets/images/CHARLAS/c1.jpg" alt="Charla 1">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/CHARLAS/c2.jpg" alt="Charla 2">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/CHARLAS/c3.jpg" alt="Charla 3">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/CHARLAS/c4.jpg" alt="Charla 4">
+              </div>
+            </div>
           </div>
-          <h3 class="activity-title">Título de la expedición</h3>
-          <p class="activity-description">
-            Texto informativo de la actividad
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="badge bg-info">Todos los niveles</span>
-            <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal1')">Más info</button>
+          <div class="activity-content">
+            <h3 class="activity-title">Charlas Educativas</h3>
+            <p class="activity-description">
+              Charlas sobre seguridad en montaña, técnicas de escalada, meteorología y primeros auxilios.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-info">Todos los niveles</span>
+              <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal1')">Más info</button>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-6 fade-in-up">
+      <!-- Talleres -->
+      <div class="col-lg-4 fade-in-up">
         <div class="activity-card">
-          <div class="activity-date">
-            <i class="fas fa-calendar-alt me-2"></i>
-            00 / 00 / 00
+          <div class="activity-image-container">
+            <div class="activity-carousel talleres-carousel">
+              <div class="activity-slide active">
+                <img src="assets/images/TALLERES/t1.jpg" alt="Taller 1">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/TALLERES/t2.jpg" alt="Taller 2">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/TALLERES/t3.jpg" alt="Taller 3">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/TALLERES/t4.jpg" alt="Taller 4">
+              </div>
+            </div>
           </div>
-          <h3 class="activity-title">Título de la expedición</h3>
-          <p class="activity-description">
-            Texto informativo de la actividad
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="badge bg-warning">Principiante</span>
-            <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal2')">Más info</button>
+          <div class="activity-content">
+            <h3 class="activity-title">Talleres Prácticos</h3>
+            <p class="activity-description">
+              Talleres hands-on de nudos, uso de equipos, técnicas de rescate y navegación.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-warning">Principiante</span>
+              <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal2')">Más info</button>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-6 fade-in-up">
+      <!-- Excursiones -->
+      <div class="col-lg-4 fade-in-up">
         <div class="activity-card">
-          <div class="activity-date">
-            <i class="fas fa-calendar-alt me-2"></i>
-            00 / 00 / 00
+          <div class="activity-image-container">
+            <div class="activity-carousel excursiones-carousel">
+              <div class="activity-slide active">
+                <img src="assets/images/paisajes/p1.jpg" alt="Excursión 1">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p2.jpg" alt="Excursión 2">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p3.jpg" alt="Excursión 3">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p4.jpg" alt="Excursión 4">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p5.jpg" alt="Excursión 5">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p6.jpg" alt="Excursión 6">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p7.jpg" alt="Excursión 7">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p8.jpg" alt="Excursión 8">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p9.jpg" alt="Excursión 9">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p10.jpg" alt="Excursión 10">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p11.jpg" alt="Excursión 11">
+              </div>
+              <div class="activity-slide">
+                <img src="assets/images/paisajes/p12.jpg" alt="Excursión 12">
+              </div>
+            </div>
           </div>
-          <h3 class="activity-title">Título de la expedición</h3>
-          <p class="activity-description">
-            Texto informativo de la actividad
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="badge bg-success">Intermedio</span>
-            <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal3')">Más info</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 fade-in-up">
-        <div class="activity-card">
-          <div class="activity-date">
-            <i class="fas fa-calendar-alt me-2"></i>
-            00 / 00 / 00
-          </div>
-          <h3 class="activity-title">Título de la expedición</h3>
-          <p class="activity-description">
-            Texto informativo de la actividad
-          </p>
-          <div class="d-flex justify-content-between align-items-center">
-            <span class="badge bg-danger">Avanzado</span>
-            <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal4')">Más info</button>
+          <div class="activity-content">
+            <h3 class="activity-title">Excursiones</h3>
+            <p class="activity-description">
+              Expediciones a cerros locales, trekkings de múltiples días y ascensiones a volcanes.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-success">Intermedio</span>
+              <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal3')">Más info</button>
+            </div>
           </div>
         </div>
       </div>
@@ -227,24 +305,71 @@
       </p>
     </div>
 
-    <div class="owl-carousel owl-theme community-carousel">
+    <!-- Primera fila de comunidad (imágenes 1-10) -->
+    <div class="owl-carousel owl-theme community-carousel-1 mb-4">
       <div class="gallery-item">
-        <img src="assets/images/com1.jpg" alt="Comunidad 1">
+        <img src="assets/images/COMUNIDAD/1.jpg" alt="Comunidad 1">
       </div>
       <div class="gallery-item">
-        <img src="assets/images/com2.jpg" alt="Comunidad 2">
+        <img src="assets/images/COMUNIDAD/2.jpg" alt="Comunidad 2">
       </div>
       <div class="gallery-item">
-        <img src="assets/images/com3.jpg" alt="Comunidad 3">
+        <img src="assets/images/COMUNIDAD/3.jpg" alt="Comunidad 3">
       </div>
       <div class="gallery-item">
-        <img src="assets/images/com4.jpg" alt="Comunidad 4">
+        <img src="assets/images/COMUNIDAD/4.jpg" alt="Comunidad 4">
       </div>
       <div class="gallery-item">
-        <img src="assets/images/com5.jpg" alt="Comunidad 5">
+        <img src="assets/images/COMUNIDAD/5.jpg" alt="Comunidad 5">
       </div>
       <div class="gallery-item">
-        <img src="assets/images/com6.jpg" alt="Comunidad 6">
+        <img src="assets/images/COMUNIDAD/6.jpg" alt="Comunidad 6">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/7.jpg" alt="Comunidad 7">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/8.jpg" alt="Comunidad 8">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/9.jpg" alt="Comunidad 9">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/10.jpg" alt="Comunidad 10">
+      </div>
+    </div>
+
+    <!-- Segunda fila de comunidad (imágenes 11-20) -->
+    <div class="owl-carousel owl-theme community-carousel-2">
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/11.jpg" alt="Comunidad 11">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/12.jpg" alt="Comunidad 12">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/13.jpg" alt="Comunidad 13">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/14.jpg" alt="Comunidad 14">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/15.jpg" alt="Comunidad 15">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/16.jpg" alt="Comunidad 16">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/17.jpg" alt="Comunidad 17">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/18.jpg" alt="Comunidad 18">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/19.jpg" alt="Comunidad 19">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/COMUNIDAD/20.jpg" alt="Comunidad 20">
       </div>
     </div>
 
@@ -255,14 +380,6 @@
       <p class="text-muted">
         <strong>"Por una montaña más segura"</strong>
       </p>
-      <div class="social-links d-inline-flex">
-        <a href="https://www.instagram.com/cordada_chillan/" target="_blank" class="social-link">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/cordadachillan/" target="_blank" class="social-link">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-      </div>
     </div>
   </div>
 </section>
@@ -308,15 +425,21 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Título de la expedición</h5>
+        <h5 class="modal-title">Charlas Educativas</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <h6>Fecha: 00 / 00 / 00</h6>
+        <h6>Modalidad: Presencial y Virtual</h6>
         <h6>Nivel: Todos los niveles</h6>
         <hr>
-        <p>Aquí va toda la información detallada de la actividad...</p>
-        <p>Descripción completa, requisitos, qué traer, punto de encuentro, etc.</p>
+        <p>Nuestras charlas educativas cubren temas fundamentales para la práctica segura del montañismo:</p>
+        <ul>
+          <li>Seguridad en montaña y gestión de riesgos</li>
+          <li>Meteorología aplicada al montañismo</li>
+          <li>Primeros auxilios en alta montaña</li>
+          <li>Técnicas básicas de escalada</li>
+          <li>Equipamiento y su correcto uso</li>
+        </ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -330,14 +453,21 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Título de la expedición</h5>
+        <h5 class="modal-title">Talleres Prácticos</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <h6>Fecha: 00 / 00 / 00</h6>
-        <h6>Nivel: Principiante</h6>
+        <h6>Modalidad: Presencial</h6>
+        <h6>Nivel: Principiante a Intermedio</h6>
         <hr>
-        <p>Aquí va toda la información detallada de la actividad...</p>
+        <p>Talleres hands-on donde aprenderás técnicas prácticas:</p>
+        <ul>
+          <li>Nudos básicos y avanzados para montañismo</li>
+          <li>Uso correcto de arneses, cascos y equipos</li>
+          <li>Técnicas de autorescate y rescate</li>
+          <li>Navegación con GPS y brújula</li>
+          <li>Montaje de campamentos</li>
+        </ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -351,35 +481,22 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Título de la expedición</h5>
+        <h5 class="modal-title">Excursiones</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <h6>Fecha: 00 / 00 / 00</h6>
-        <h6>Nivel: Intermedio</h6>
+        <h6>Modalidad: Presencial</h6>
+        <h6>Nivel: Intermedio a Avanzado</h6>
         <hr>
-        <p>Aquí va toda la información detallada de la actividad...</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Inscribirse</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modal4" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Título de la expedición</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <h6>Fecha: 00 / 00 / 00</h6>
-        <h6>Nivel: Avanzado</h6>
-        <hr>
-        <p>Aquí va toda la información detallada de la actividad...</p>
+        <p>Expediciones reales donde aplicamos todo lo aprendido:</p>
+        <ul>
+          <li>Ascensiones a cerros locales</li>
+          <li>Trekkings de múltiples días</li>
+          <li>Expediciones a volcanes</li>
+          <li>Rutas de escalada en roca</li>
+          <li>Travesías en cordillera</li>
+        </ul>
+        <p><strong>Requisitos:</strong> Nivel físico adecuado y conocimientos básicos de montañismo.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

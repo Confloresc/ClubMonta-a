@@ -10,6 +10,67 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('currentYear').textContent = new Date().getFullYear();
   
   // =====================================
+  // CAROUSEL DEL BANNER PRINCIPAL
+  // =====================================
+  const bannerSlides = document.querySelectorAll('.banner-slide');
+  let currentBannerSlide = 0;
+  
+  console.log('Banner slides encontrados:', bannerSlides.length); // Debug
+  
+  function nextBannerSlide() {
+    if (bannerSlides.length > 0) {
+      bannerSlides[currentBannerSlide].classList.remove('active');
+      currentBannerSlide = (currentBannerSlide + 1) % bannerSlides.length;
+      bannerSlides[currentBannerSlide].classList.add('active');
+      console.log('Cambiando a slide:', currentBannerSlide); // Debug
+    }
+  }
+  
+  // Cambiar imagen del banner cada 4 segundos
+  if (bannerSlides.length > 1) {
+    setInterval(nextBannerSlide, 4000);
+  }
+  
+  // =====================================
+  // CAROUSELS DE ACTIVIDADES
+  // =====================================
+  
+  // Carousel de Charlas
+  const charlasSlides = document.querySelectorAll('.charlas-carousel .activity-slide');
+  let currentCharlasSlide = 0;
+  
+  function nextCharlasSlide() {
+    charlasSlides[currentCharlasSlide].classList.remove('active');
+    currentCharlasSlide = (currentCharlasSlide + 1) % charlasSlides.length;
+    charlasSlides[currentCharlasSlide].classList.add('active');
+  }
+  
+  // Carousel de Talleres
+  const talleresSlides = document.querySelectorAll('.talleres-carousel .activity-slide');
+  let currentTalleresSlide = 0;
+  
+  function nextTalleresSlide() {
+    talleresSlides[currentTalleresSlide].classList.remove('active');
+    currentTalleresSlide = (currentTalleresSlide + 1) % talleresSlides.length;
+    talleresSlides[currentTalleresSlide].classList.add('active');
+  }
+  
+  // Carousel de Excursiones
+  const excursionesSlides = document.querySelectorAll('.excursiones-carousel .activity-slide');
+  let currentExcursionesSlide = 0;
+  
+  function nextExcursionesSlide() {
+    excursionesSlides[currentExcursionesSlide].classList.remove('active');
+    currentExcursionesSlide = (currentExcursionesSlide + 1) % excursionesSlides.length;
+    excursionesSlides[currentExcursionesSlide].classList.add('active');
+  }
+  
+  // Iniciar carousels de actividades con diferentes intervalos para variedad
+  setInterval(nextCharlasSlide, 3000);     // Cada 3 segundos
+  setInterval(nextTalleresSlide, 3500);    // Cada 3.5 segundos
+  setInterval(nextExcursionesSlide, 4000); // Cada 4 segundos
+  
+  // =====================================
   // NAVEGACIÓN ACTIVA EN SCROLL
   // =====================================
   const sections = document.querySelectorAll('section');
@@ -96,8 +157,8 @@ function openModal(modalId) {
 // =====================================
 $(document).ready(function() {
   
-  // Configuración del carousel de comunidad
-  $('.community-carousel').owlCarousel({
+  // Configuración del primer carousel de comunidad (imágenes 1-10)
+  $('.community-carousel-1').owlCarousel({
     items: 3,
     loop: true,
     margin: 20,
@@ -107,6 +168,31 @@ $(document).ready(function() {
     nav: false,
     dots: true,
     smartSpeed: 600,
+    responsive: {
+      0: {
+        items: 1
+      },
+      576: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+  
+  // Configuración del segundo carousel de comunidad (imágenes 11-20)
+  $('.community-carousel-2').owlCarousel({
+    items: 3,
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    autoplayTimeout: 3500, // Diferente velocidad para variedad
+    autoplayHoverPause: false,
+    nav: false,
+    dots: true,
+    smartSpeed: 600,
+    rtl: true, // Dirección opuesta para efecto visual
     responsive: {
       0: {
         items: 1
@@ -139,7 +225,7 @@ $(document).ready(function() {
     const $this = $(this);
     const countTo = $this.text();
     
-    if (!isNaN(countTo)) {
+    if (!isNaN(countTo) && countTo !== 'Club') {
       $({ countNum: 0 }).animate(
         { countNum: countTo },
         {
