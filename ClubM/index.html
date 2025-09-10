@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Club de montaña federado sin fines de lucro de Chillán. Por una montaña más segura. Charlas, cursos, excursiones, trekking y escalada.">
+  <meta name="author" content="Cordada Chillán">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Cordada Chillán – Club de Montañismo</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <img src="assets/images/logo.png" alt="Logo Cordada Chillán">
+      <span>Cordada Chillán</span>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#actividades">Actividades</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">Quiénes Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#comunidad">Comunidad</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="hero-decoration"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="hero-content fade-in-up">
+          <h1 class="hero-title">Por una Montaña más Segura</h1>
+          <p class="hero-subtitle">
+            Somos un club de montaña federado, sin fines de lucro de la ciudad de Chillán. 
+            Promovemos deportes de montaña con seguridad y compañerismo.
+          </p>
+          <a href="#actividades" class="btn-hero">
+            <i class="fas fa-mountain me-2"></i>
+            Conoce nuestras actividades
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Actividades -->
+<section id="actividades" class="py-5">
+  <div class="container">
+    <div class="section-title fade-in-up">
+      <div class="section-subtitle">Nuestras</div>
+      <h2 class="section-heading">Actividades</h2>
+      <p class="section-description">
+        Charlas, cursos, excursiones, trekking y talleres de escalada. 
+        Actividades para todos los niveles con seguridad y compañerismo.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 fade-in-up">
+        <div class="activity-card">
+          <div class="activity-date">
+            <i class="fas fa-calendar-alt me-2"></i>
+            00 / 00 / 00
+          </div>
+          <h3 class="activity-title">Título de la expedición</h3>
+          <p class="activity-description">
+            Texto informativo de la actividad
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="badge bg-info">Todos los niveles</span>
+            <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal1')">Más info</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 fade-in-up">
+        <div class="activity-card">
+          <div class="activity-date">
+            <i class="fas fa-calendar-alt me-2"></i>
+            00 / 00 / 00
+          </div>
+          <h3 class="activity-title">Título de la expedición</h3>
+          <p class="activity-description">
+            Texto informativo de la actividad
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="badge bg-warning">Principiante</span>
+            <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal2')">Más info</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 fade-in-up">
+        <div class="activity-card">
+          <div class="activity-date">
+            <i class="fas fa-calendar-alt me-2"></i>
+            00 / 00 / 00
+          </div>
+          <h3 class="activity-title">Título de la expedición</h3>
+          <p class="activity-description">
+            Texto informativo de la actividad
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="badge bg-success">Intermedio</span>
+            <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal3')">Más info</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 fade-in-up">
+        <div class="activity-card">
+          <div class="activity-date">
+            <i class="fas fa-calendar-alt me-2"></i>
+            00 / 00 / 00
+          </div>
+          <h3 class="activity-title">Título de la expedición</h3>
+          <p class="activity-description">
+            Texto informativo de la actividad
+          </p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="badge bg-danger">Avanzado</span>
+            <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal4')">Más info</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="#contacto" class="btn btn-primary btn-lg">
+        <i class="fas fa-users me-2"></i>
+        Únete a nosotros
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 fade-in-up">
+        <div class="section-subtitle">Sobre nosotros</div>
+        <h2 class="section-heading">Quiénes Somos</h2>
+        <div class="about-text">
+          <p>
+            <strong>Club de Montaña Cordada Chillán</strong> es un club de montaña federado, 
+            sin fines de lucro de la ciudad de Chillán. Somos más que un club; somos un 
+            equipo 💪 que se apoya en cada ascenso y celebra cada descenso.
+          </p>
+          <p>
+            En Cordada Chillán se aprende que los límites existen para superarlos, que la 
+            naturaleza se respeta y siempre nos enseña algo nuevo. Promovemos deportes de 
+            montaña con seguridad y compañerismo bajo nuestro lema: <strong>"Por una montaña más segura"</strong>.
+          </p>
+          <p>
+            ⛰️ En la montaña no solo subimos cumbres, también hacemos trabajo en equipo. 
+            Una cordada unida y comunicada es una cordada segura. Siempre atentos, siempre juntos. 
+            Porque la seguridad comienza con la confianza.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">12</span>
+            <div class="stat-label">Años de Experiencia</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <div class="stat-label">Socios Activos</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">Club</span>
+            <div class="stat-label">Federado</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 fade-in-up">
+        <div class="text-center">
+          <img src="assets/images/logo.png" alt="Logo Cordada Chillán" 
+               class="img-fluid" style="max-height: 400px;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Community Gallery -->
+<section id="comunidad" class="py-5 community-gallery">
+  <div class="container">
+    <div class="section-title fade-in-up">
+      <div class="section-subtitle">Comunidad</div>
+      <h2 class="section-heading">Nuestra Comunidad</h2>
+      <p class="section-description">
+        Conoce a los apasionados montañistas que forman parte de nuestra familia. 
+        Somos más que un club; somos un equipo que se apoya en cada ascenso.
+      </p>
+    </div>
+
+    <div class="owl-carousel owl-theme community-carousel">
+      <div class="gallery-item">
+        <img src="assets/images/com1.jpg" alt="Comunidad 1">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/com2.jpg" alt="Comunidad 2">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/com3.jpg" alt="Comunidad 3">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/com4.jpg" alt="Comunidad 4">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/com5.jpg" alt="Comunidad 5">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/com6.jpg" alt="Comunidad 6">
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <p class="lead">
+        Únete a nuestra comunidad y descubre la experiencia de vivir la montaña con seguridad y compañerismo.
+      </p>
+      <p class="text-muted">
+        <strong>"Por una montaña más segura"</strong>
+      </p>
+      <div class="social-links d-inline-flex">
+        <a href="https://www.instagram.com/cordada_chillan/" target="_blank" class="social-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/cordadachillan/" target="_blank" class="social-link">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contacto">
+  <div class="container">
+    <div class="footer-content">
+      <h3 class="footer-title">Contáctanos</h3>
+      
+      <div class="social-links">
+        <a href="https://www.instagram.com/cordada_chillan/" target="_blank" class="social-link">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/cordadachillan/" target="_blank" class="social-link">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="mailto:cordadachillan@gmail.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="contact-info">
+        <p>
+          <i class="fas fa-envelope me-2"></i>
+          <a href="mailto:cordadachillan@gmail.com" style="color: white; text-decoration: none;">
+            cordadachillan@gmail.com
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Cordada Chillán &nbsp;—&nbsp; Design base:
+        <a rel="nofollow noopener" href="https://templatemo.com" style="color: rgba(255,255,255,0.7);">TemplateMo</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Modals para más información -->
+<div class="modal fade" id="modal1" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Título de la expedición</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Fecha: 00 / 00 / 00</h6>
+        <h6>Nivel: Todos los niveles</h6>
+        <hr>
+        <p>Aquí va toda la información detallada de la actividad...</p>
+        <p>Descripción completa, requisitos, qué traer, punto de encuentro, etc.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Inscribirse</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Título de la expedición</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Fecha: 00 / 00 / 00</h6>
+        <h6>Nivel: Principiante</h6>
+        <hr>
+        <p>Aquí va toda la información detallada de la actividad...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Inscribirse</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal3" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Título de la expedición</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Fecha: 00 / 00 / 00</h6>
+        <h6>Nivel: Intermedio</h6>
+        <hr>
+        <p>Aquí va toda la información detallada de la actividad...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Inscribirse</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal4" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Título de la expedición</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <h6>Fecha: 00 / 00 / 00</h6>
+        <h6>Nivel: Avanzado</h6>
+        <hr>
+        <p>Aquí va toda la información detallada de la actividad...</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Inscribirse</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
