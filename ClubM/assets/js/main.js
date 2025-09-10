@@ -243,3 +243,55 @@ $(document).ready(function() {
   });
   
 });
+
+// =====================================
+// GALERÍA CLICKEABLE
+// =====================================
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.addEventListener('click', function() {
+    const modalImg = document.getElementById('galleryModalImage');
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
+    modal.show();
+  });
+});
+
+// =====================================
+// CERRAR MODAL AL HACER CLIC EN CUALQUIER PARTE
+// =====================================
+document.addEventListener('DOMContentLoaded', function() {
+  const galleryModal = document.getElementById('galleryModal');
+  
+  if (galleryModal) {
+    // Cerrar al hacer clic en el backdrop (área fuera de la imagen)
+    galleryModal.addEventListener('click', function(e) {
+      // Si el clic es directamente en el modal (no en la imagen)
+      if (e.target === this || e.target.classList.contains('modal-dialog') || e.target.classList.contains('modal-body')) {
+        const modal = bootstrap.Modal.getInstance(galleryModal);
+        if (modal) {
+          modal.hide();
+        }
+      }
+    });
+    
+    // Prevenir que el clic en la imagen cierre el modal
+    const modalImg = document.getElementById('galleryModalImage');
+    if (modalImg) {
+      modalImg.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+    
+    // Cerrar con tecla ESC (funcionalidad adicional)
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const modal = bootstrap.Modal.getInstance(galleryModal);
+        if (modal) {
+          modal.hide();
+        }
+      }
+    });
+  }
+});

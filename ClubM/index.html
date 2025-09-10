@@ -79,7 +79,7 @@
       <img src="assets/images/BANNER/b8.jpg" alt="Banner 8">
     </div>
   </div>
-  <div class="hero-overlay"></div>
+  <div class="hero-text-band">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
@@ -97,6 +97,7 @@
       </div>
     </div>
   </div>
+</div>
 </section>
 
 <!-- Actividades -->
@@ -136,8 +137,7 @@
             <p class="activity-description">
               Charlas sobre seguridad en montaña, técnicas de escalada, meteorología y primeros auxilios.
             </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge bg-info">Todos los niveles</span>
+            <div class="d-flex justify-content-end align-items-center">
               <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal1')">Más info</button>
             </div>
           </div>
@@ -168,8 +168,7 @@
             <p class="activity-description">
               Talleres hands-on de nudos, uso de equipos, técnicas de rescate y navegación.
             </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge bg-warning">Principiante</span>
+            <div class="d-flex justify-content-end align-items-center">
               <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal2')">Más info</button>
             </div>
           </div>
@@ -224,8 +223,7 @@
             <p class="activity-description">
               Expediciones a cerros locales, trekkings de múltiples días y ascensiones a volcanes.
             </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="badge bg-success">Intermedio</span>
+            <div class="d-flex justify-content-end align-items-center">
               <button class="btn btn-outline-primary btn-sm" onclick="openModal('modal3')">Más info</button>
             </div>
           </div>
@@ -234,7 +232,7 @@
     </div>
 
     <div class="text-center mt-4">
-      <a href="#contacto" class="btn btn-primary btn-lg">
+      <a href="#contacto" class="btn btn-lg" style="background-color: var(--secondary-color); border-color: var(--secondary-color); color: white;">
         <i class="fas fa-users me-2"></i>
         Únete a nosotros
       </a>
@@ -245,54 +243,72 @@
 <!-- About Section -->
 <section id="about" class="py-5 bg-light">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 fade-in-up">
-        <div class="section-subtitle">Sobre nosotros</div>
-        <h2 class="section-heading">Quiénes Somos</h2>
-        <div class="about-text">
-          <p>
-            <strong>Club de Montaña Cordada Chillán</strong> es un club de montaña federado, 
-            sin fines de lucro de la ciudad de Chillán. Somos más que un club; somos un 
-            equipo 💪 que se apoya en cada ascenso y celebra cada descenso.
-          </p>
-          <p>
-            En Cordada Chillán se aprende que los límites existen para superarlos, que la 
-            naturaleza se respeta y siempre nos enseña algo nuevo. Promovemos deportes de 
-            montaña con seguridad y compañerismo bajo nuestro lema: <strong>"Por una montaña más segura"</strong>.
-          </p>
-          <p>
-            ⛰️ En la montaña no solo subimos cumbres, también hacemos trabajo en equipo. 
-            Una cordada unida y comunicada es una cordada segura. Siempre atentos, siempre juntos. 
-            Porque la seguridad comienza con la confianza.
-          </p>
-        </div>
+    <!-- Título de sección -->
+    <div class="section-title fade-in-up">
+      <div class="section-subtitle">Sobre nosotros</div>
+      <h2 class="section-heading">Quiénes Somos</h2>
+    </div>
 
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-number">12</span>
-            <div class="stat-label">Años de Experiencia</div>
+    <!-- Contenido principal: dos columnas -->
+    <div class="about-main-content">
+      <div class="row align-items-center justify-content-center">
+        <!-- Columna de texto -->
+        <div class="col-lg-6 fade-in-up">
+          <div class="about-text-content">
+            <div class="about-text">
+              <p>
+                <strong>Club de Montaña Cordada Chillán</strong> es un club de montaña federado, 
+                sin fines de lucro de la ciudad de Chillán. Somos más que un club; somos un 
+                equipo 💪 que se apoya en cada ascenso y celebra cada descenso.
+              </p>
+              <p>
+                En Cordada Chillán se aprende que los límites existen para superarlos, que la 
+                naturaleza se respeta y siempre nos enseña algo nuevo. Promovemos deportes de 
+                montaña con seguridad y compañerismo bajo nuestro lema: <strong>"Por una montaña más segura"</strong>.
+              </p>
+              <p>
+                ⛰️ En la montaña no solo subimos cumbres, también hacemos trabajo en equipo. 
+                Una cordada unida y comunicada es una cordada segura. Siempre atentos, siempre juntos. 
+                Porque la seguridad comienza con la confianza.
+              </p>
+            </div>
           </div>
-          <div class="stat-item">
-            <span class="stat-number">50+</span>
-            <div class="stat-label">Socios Activos</div>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">Club</span>
-            <div class="stat-label">Federado</div>
+        </div>
+        
+        <!-- Columna del logo -->
+        <div class="col-lg-6 fade-in-up">
+          <div class="about-logo-container">
+            <img src="assets/images/logo.png" alt="Logo Cordada Chillán" class="about-logo">
           </div>
         </div>
       </div>
-      
-      <div class="col-lg-6 fade-in-up">
-        <div class="text-center">
-          <img src="assets/images/logo.png" alt="Logo Cordada Chillán" 
-               class="img-fluid" style="max-height: 400px;">
+    </div>
+
+    <!-- Métricas en una fila -->
+    <div class="about-metrics">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-4 col-sm-6 mb-3">
+          <div class="metric-card">
+            <span class="metric-number">12</span>
+            <div class="metric-label">Años de Experiencia</div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 mb-3">
+          <div class="metric-card">
+            <span class="metric-number">50+</span>
+            <div class="metric-label">Socios Activos</div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 mb-3">
+          <div class="metric-card">
+            <span class="metric-number">Club</span>
+            <div class="metric-label">Federado</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- Community Gallery -->
 <section id="comunidad" class="py-5 community-gallery">
   <div class="container">
@@ -377,12 +393,24 @@
       <p class="lead">
         Únete a nuestra comunidad y descubre la experiencia de vivir la montaña con seguridad y compañerismo.
       </p>
-      <p class="text-muted">
-        <strong>"Por una montaña más segura"</strong>
-      </p>
     </div>
   </div>
 </section>
+
+<!-- Modal para galería de imágenes -->
+<div class="modal fade gallery-modal" id="galleryModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img id="galleryModalImage" src="" alt="Imagen de comunidad">
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- Footer -->
 <footer id="contacto">
@@ -414,13 +442,17 @@
 
     <div class="footer-bottom">
       <p>&copy; <span id="currentYear"></span> Cordada Chillán &nbsp;—&nbsp; Design base:
-        <a rel="nofollow noopener" href="https://templatemo.com" style="color: rgba(255,255,255,0.7);">TemplateMo</a>
+        <a rel="nofollow noopener" href="https://templatemo.com" style="color: rgba(255,255,255,0.7);">
+          <p>Copyright &copy; 2020 Breezed Co., Ltd. 
+            - Design: <a rel="nofollow noopener" href="https://templatemo.com">TemplateMo</a>
+          </p>
+        </a>
       </p>
     </div>
   </div>
 </footer>
 
-<!-- Modals para más información -->
+<!-- Modales para más información -->
 <div class="modal fade" id="modal1" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -429,21 +461,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <h6>Modalidad: Presencial y Virtual</h6>
-        <h6>Nivel: Todos los niveles</h6>
-        <hr>
-        <p>Nuestras charlas educativas cubren temas fundamentales para la práctica segura del montañismo:</p>
-        <ul>
-          <li>Seguridad en montaña y gestión de riesgos</li>
-          <li>Meteorología aplicada al montañismo</li>
-          <li>Primeros auxilios en alta montaña</li>
-          <li>Técnicas básicas de escalada</li>
-          <li>Equipamiento y su correcto uso</li>
-        </ul>
+        <!-- Aquí puedes agregar la información de las charlas educativas -->
+        <p class="text-muted">Información próximamente...</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Inscribirse</button>
       </div>
     </div>
   </div>
@@ -457,21 +479,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <h6>Modalidad: Presencial</h6>
-        <h6>Nivel: Principiante a Intermedio</h6>
-        <hr>
-        <p>Talleres hands-on donde aprenderás técnicas prácticas:</p>
-        <ul>
-          <li>Nudos básicos y avanzados para montañismo</li>
-          <li>Uso correcto de arneses, cascos y equipos</li>
-          <li>Técnicas de autorescate y rescate</li>
-          <li>Navegación con GPS y brújula</li>
-          <li>Montaje de campamentos</li>
-        </ul>
+        <!-- Aquí puedes agregar la información de los talleres prácticos -->
+        <p class="text-muted">Información próximamente...</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Inscribirse</button>
       </div>
     </div>
   </div>
@@ -485,22 +497,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <h6>Modalidad: Presencial</h6>
-        <h6>Nivel: Intermedio a Avanzado</h6>
-        <hr>
-        <p>Expediciones reales donde aplicamos todo lo aprendido:</p>
-        <ul>
-          <li>Ascensiones a cerros locales</li>
-          <li>Trekkings de múltiples días</li>
-          <li>Expediciones a volcanes</li>
-          <li>Rutas de escalada en roca</li>
-          <li>Travesías en cordillera</li>
-        </ul>
-        <p><strong>Requisitos:</strong> Nivel físico adecuado y conocimientos básicos de montañismo.</p>
+        <!-- Aquí puedes agregar la información de las excursiones -->
+        <p class="text-muted">Información próximamente...</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Inscribirse</button>
       </div>
     </div>
   </div>
